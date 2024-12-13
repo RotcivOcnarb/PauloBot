@@ -1,0 +1,73 @@
+<html>
+	<head>
+		<title>RotsBots Twitch</title>
+	</head>
+	</body>
+		
+		<h1>Rots Bots</h1>
+		<br>
+		
+		<h2>Comandos</h2>
+		<br>
+		<code>paulo, criar comando [NOME] quando mensagem for do [PESSOA], canal [CANAL], mensagem comeca com "[TEXTO]", termina com "[TEXTO]", contem "[TEXTO1];[TEXTO2];[TEXTO3]", diga "[TEXTO1];[TEXTO2];[TEXTO3]" no canal [CANAL], incremente [VARIAVEL] com [VALOR], sobrescreva [VARIAVEL] com [VALOR], multiplique [VARIAVEL] com [VALOR]<br></code>
+		<br>
+		[NOME] no caso pode ser tanto o ID quanto o nome da pessoa (recomendável ser o ID, visto que o nome pode ser mudado)
+		<br><br>
+		<h3>keywords:</h3>
+		<br>
+		<code>${any}</code> -> tanto pra pessoa quanto pra canal, significa qualquer um, utilizando no começo do comando. Ex:
+		<br><br>
+		<code>paulo, criar comando [NOME] quando mensagem for do ${any}, canal ${any}</code>
+		<br><br>
+		<code>${channel}</code> -> o canal que esse comando ativado<br>
+		<code>${user}</code> -> o usuario que ativou o comando<br>
+		<code>${userID}</code> -> o id do usuário que ativou o comando<br>
+		<br><br>
+		Lembrando que todos os textos são case insensitive.<br>
+		<br>
+		Na hora do filtro, quando colocar mensagem contem "TEXTO", você pode separar textos por ; nesse caso, ele vai checar se um dos textos coincide com a mensagem. Ex:<br>
+		<br>
+		<code>paulo, criar comando [NOME] quando mensagem for do ${any}, canal ${any}, mensagem contem "monark;mito"</code>
+		<br><br>
+		este comando é disparado quando a mensagem contem tanto "monark" quanto "mito", ou os dois
+		<br>
+		Ao escrever diga "[TEXTO]", você pode separar por ; textos diferentes, nesse caso o bot vai escolher um desses textos aleatóriamente para dize-lo
+		<br>
+		<h2>Variaveis</h2>
+		<br>
+		É possivel também criar e utilizar variaveis usando o comando:
+		<br><br>
+		<code>paulo, criar variavel [NOME] com valor [VALOR]</code>
+		<br><br>
+		o bot vai criar uma variavel com o valor definido, que pode ser referenciada em comandos.
+		<br><br>
+		Quando se quer usar o valor de uma variável dentro de um texto, encapsule o nome dela com ${}, Ex.
+		<br><br>
+		<code>... diga "hoje eu joguei lol ${numlol} vezes" no canal ${channel} ...</code>
+		<br><br>
+		lembre-se que só se encapsula nos textos, quando referencia ela num comando, coloque o nome dela normalmente. Ex.
+		<br><br>
+		<code>paulo, criar comando aumenta quanto mensagem for do ${any}, canal ${any}, mensagem contem "lolzinho", incremente numlol com 1</code>
+		<br><br>
+		<code>paulo, criar comando mostralol quando mensagem for do ${any}, canal ${any}, mensagem contem "mostra lol ae", diga "hoje eu joguei lol ${numlol} vezes" no canal ${channel}</code>
+		
+		<h2>Comandos pré feitos</h2>
+		<br>
+		existem alguns comandos básicos que já existem para fazer coisas que comandos não conseguem fazer normalmente:
+		<br><br>
+		<code>paulo, qual meu id?</code> -> Mostra o seu ID<br>
+		<code>paulo, qual meu nivel?</code> -> mostra seu nivel atual<br>
+		<code>paulo, qual id desse canal?</code> -> mostra o id do canal<br>
+		<code>paulo, deletar funcao [FUNCAO]</code> -> deleta a função especificada<br>
+		<code>paulo, deletar variavel [VARIAVEL]</code> -> deleta a variavel especificada<br>
+		<code>paulo, listar comandos</code> -> lista todos os comandos criados (exceto os pré-feitos)<br>
+		<code>paulo, listar variaveis </code>-> lista todas as variaveis criadas<br>
+		<code>paulo, mostrar [VARIAVEL]</code> -> mostra o valor atual de uma variavel especificada<br>
+		<code>paulo, descrever [FUNCAO]</code> -> mostra o JSON de uma função que especifica como ela funciona<br>
+		<br>
+		<br>
+		
+		<a href="http://ocnarb.netai.net/rotciv">Feito por Rotciv Ocnarb</a>
+	
+	</body>
+</html>
